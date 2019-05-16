@@ -3,7 +3,8 @@ En este ejemplo, se puede ver como crear un proyecto ReactNative e integrarlo co
 Además de toda la configuración del ambiente para su desarrollo.
 **Crear proyecto**
 react-native init DemoReactNativeInicial --package=XXX.XXXX.demoReactNativeInicial
-*** Prerrequisitos.
+
+***Prerrequisitos***
 (https://www.npmjs.com/package/react-native-init)
 
 Si luego de crear el proyecto, queremos ejecutarlo con el comando **react-native run-ios** se generará un error porque falta crear el archivo **ios/main.jsbundle**
@@ -12,15 +13,15 @@ Si luego de crear el proyecto, queremos ejecutarlo con el comando **react-native
 react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios
 https://medium.com/@tunvirrahmantusher/create-ipa-and-apk-from-react-native-72fe53c6a8db
 
-##Instalar NativeBase y sus dependecias
+## Instalar NativeBase y sus dependecias
 npm install native-base --save
 react-native link
 
-#Ejecutar emulador ios
+## Ejecutar emulador ios
 react-native run-ios 
 
 
-#Instalar módulos para el ambiente de desarrollo.
+## Instalar módulos para el ambiente de desarrollo.
 npm install --save-dev eslint
 
 npm install --save-dev eslint-plugin-react-native
@@ -43,13 +44,13 @@ eslint-plugin-import — Required for linting of ES2015+ (ES6+) import/expor
 eslint-plugin-jsx-a11y — Support for accessibility rules on JSX elements.
 babel-eslint — Parser to replace eslint default if we are using class properties, decorators, async/await, types.
 
-##Configurar ESLint
+### Configurar ESLint
 
 node_modules/.bin/eslint --init
 
 
 ## Posibles Errores
-###Error 1
+### Error 1
 Failed to load bundle(http://localhost:8081/index.bundle?platform=ios&dev=true&minify=false) with error:(Metro Bundler has encountered an internal error, please check your terminal error output for more details (null))
 
 __38-[RCTCxxBridge loadSource:onProgress:]_block_invoke.228
@@ -77,8 +78,8 @@ start_wqthread
 
 ### Error2
 An error was encountered processing the command (domain=FBSOpenApplicationServiceErrorDomain, code=1): The request to open
-**Solución**:
 
+**Solución**
 rm -rf node_modules (or just delete the node_modules directory however you can)
 yarn (or if you use npm: npm install)
 react-native link
